@@ -120,7 +120,7 @@
 .ex-10-icon:hover
 {
     /* transform: rotate(0); */
-    animation: animate 5s infinite linear; /*volutamente posto 10s per il giro*/
+    animation: animate 3s infinite linear; /*volutamente posto 10s per il giro*/
 }
 @keyframes animate
 {
@@ -172,7 +172,7 @@
 {
     position: absolute;
     top: -10px;
-    left: 10%;
+    left: 10%;      /*è lui*/
     background: #f5f5f5;
     width: 60px;
     height: 20px;
@@ -181,12 +181,53 @@
 {
     position: absolute;
     bottom: -10px;
-    right: 20%;
+    right: 20%;     /*è lui*/
     background: #f5f5f5;
     width: 60px;
     height: 20px;
 }
 /* ex.12 Anima il bottone, sposta lo spazio bianco */
+.ex-12-button:hover .ex-12-top-white
+{
+    animation: spazio_top 3s linear ;
+}
+@keyframes spazio_top
+{
+    0%
+    {
+        left:10%;
+    }
+    50%
+    {
+        left: calc(100% - 60px);
+    }
+    100%
+    {
+        left: 10%;
+    }
+  
+}
+.ex-12-button:hover .ex-12-bottom-white
+{
+    animation: spazio_but 3s alternate ;
+
+}
+@keyframes spazio_but
+{
+    0%
+    {
+        right:20%;
+    }
+    50%
+    {
+        right: calc(100% - 60px);
+    }
+    100%
+    {
+        right: 20%;
+    }
+  
+}
 
 /* ex.13 Anima il bottone, sposta lo spazio bianco */
 
