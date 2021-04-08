@@ -1,0 +1,165 @@
+.ex-1-square 
+{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: 8s;
+}
+/* gradualmente il nostro quadrato diventa rosso */
+.ex-1-square:hover
+{
+    background-color: red;
+}
+
+/* Cliccando, il nostro quadratino diventa gradualmente un enorme rettangolo */
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 5s;
+}
+.ex-2-square:active
+{
+    width: 180px;
+}
+
+/* Il nostro quadratino si trasforma, diventa gradualmente un cerchio */
+.ex-3-square 
+{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 2s;
+}
+.ex-3-square:hover
+{
+    border-radius: 50%;
+}
+
+/* Il nostro quadratino ora scomparirà gradualmente */
+.ex-4-square
+{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 3s;
+}
+.ex-4-square:hover
+{
+    opacity: 0;
+}
+
+/* Il nostro quadratino diventerà un pochino più grande on hover, e più piccolo on click */
+.ex-5-square 
+{
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transition: 0.5s;
+}
+.ex-5-square:hover
+{
+    width: 70px;
+    height: 70px;
+}
+.ex-5-square:active
+{
+    width: 50px;
+    height: 50px;
+}
+
+.ex-6-img, .ex-7-img, .ex-8-img 
+{
+    width: 500px;
+}
+/* ex.6 L'immagine on hover diventa bianco e nero */
+.ex-6-img:hover
+{
+    filter: grayscale(1);
+}
+/* Come sopra, aggiungiamo due effetti all'immagine, ma questa volta cambia gradualmente */
+.ex-7-img
+{
+    transition: 2s;
+}
+.ex-7-img:hover
+{
+    filter: drop-shadow(3px 6px 10px grey) sepia(0.9) hue-rotate(33deg);
+}
+/* due effetti e bordi arrotondati */
+.ex-8-img
+{
+    transition: 2s;
+}
+.ex-8-img:hover
+{
+    filter: sepia(51%) hue-rotate(65deg) saturate(423%);
+    border-radius: 97px 0px 96px 0px;
+    border: 19px solid #ff6550;
+}
+/* due effetti, bordi arrotondati e scaliamo l'immagine */
+.ex-9-img 
+{
+    margin: 50px 100px;
+    width: 400px;
+    transition: 3s;
+}
+.ex-9-img:hover
+{
+    filter: sepia(57%) brightness(118%) saturate(267%) contrast(77%) invert(65%);
+    border-radius: 26px 200px 10px 200px;
+    border: 12px inset #c7372a;
+    transform: scale(1.3);
+}
+/* Come un caricamento.. L'icona gira */
+.ex-10-icon 
+{
+    font-size: 60px; 
+}
+.ex-10-icon:hover
+{
+    transform: rotate(0);
+    animation: animate 10s infinite; /*volutamente posto 10s per il giro*/
+}
+@keyframes animate
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
